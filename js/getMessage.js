@@ -1,5 +1,5 @@
 
-const api = axios.create({
+let api = axios.create({
     baseURL: 'https://catharsys.staging.f4dev.me/'
 })
 
