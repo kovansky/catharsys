@@ -70,3 +70,5 @@ const randomThought = () => {
             console.error(error)
         })
 }
+
+randomThought();
