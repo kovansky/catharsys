@@ -2,7 +2,6 @@ let api = axios.create({
     baseURL: 'https://catharsys.staging.f4dev.me/'
 })
 
-
 api.get('/thoughts/random')
     .then((response) => {
         if(!response.data.error) {
