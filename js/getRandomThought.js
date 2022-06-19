@@ -12,6 +12,7 @@ const randomThought = () => {
                 console.log(`Random thought with text "${thought.text}"`)
 
                 let messagesInnerBlocks = document.querySelector(".messages__inner-blocks")
+                messagesInnerBlocks.dataset.thoughtId = thought.id;
                 let messagesInnerBlocksBlock = document.createElement("div")
                 messagesInnerBlocksBlock.classList.add("messages__inner-blocks-block")
                 
@@ -32,7 +33,7 @@ const randomThought = () => {
                 let messageReactionsHeart = document.createElement("div")
                 messageReactionsHeart.classList.add("messages__inner-blocks-block-reactions-heart")
                 let messageReactionsHeartH = document.createElement("h1")
-                messageReactionsHeartH.innerHTML = 0;
+                messageReactionsHeartH.innerHTML = thought.hugs;
                 messageReactionsHeartH.classList.add("messages__inner-blocks-block-reactions-heart-counter")
                 let messageReactionsHeartImg = document.createElement("img")
                 messageReactionsHeartImg.src = "img/heart.png"
@@ -40,7 +41,7 @@ const randomThought = () => {
                 let messageReactionsLike = document.createElement("div")
                 messageReactionsLike.classList.add("messages__inner-blocks-block-reactions-like")
                 let messageReactionsLikeH = document.createElement("h1")
-                messageReactionsLikeH.innerHTML = 0;
+                messageReactionsLikeH.innerHTML = thought.relatables;
                 messageReactionsLikeH.classList.add("messages__inner-blocks-block-reactions-like-counter")
                 let messageReactionsLikeImg = document.createElement("img")
                 messageReactionsLikeImg.src = "img/like.png"
